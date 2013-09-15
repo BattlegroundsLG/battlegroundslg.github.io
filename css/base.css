@@ -1,189 +1,113 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
-/* Global Reset */
-/* line 16, ../scss/base.scss */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 21, ../scss/base.scss */
-html {
-  height: 100%;
-}
-
-/* line 25, ../scss/base.scss */
-body {
-  height: 100%;
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
-  text-align: center;
-}
-
-/* line 33, ../scss/base.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-}
-
-/* line 37, ../scss/base.scss */
-h1 {
-  margin-bottom: 1em;
-}
-
-/* line 41, ../scss/base.scss */
-p {
-  margin: 1em 0;
-}
-
-/* line 45, ../scss/base.scss */
+/**
+ * @file
+ * custom overrides to bootstrap for Battlegrounds
+ */
+/**
+ * !Variables
+ */
+/**
+ * ! Text
+ */
+/* line 19, ../_scss/base.scss */
 a {
-  color: #00a;
+  color: #eeeeee;
 }
-/* line 47, ../scss/base.scss */
+/* line 22, ../_scss/base.scss */
+article a {
+  text-decoration: underline;
+}
+/* line 26, ../_scss/base.scss */
 a:hover {
-  color: #000;
-}
-/* line 50, ../scss/base.scss */
-a:visited {
-  color: #a0a;
+  text-decoration: none;
+  color: fuchsia;
 }
 
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
-/* line 61, ../scss/base.scss */
-ul.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
+/**
+ * !Global
+ */
+/* line 37, ../_scss/base.scss */
+body {
+  background: black url('/img/bg-grid.png?1379212956') repeat top left;
+  color: #eeeeee;
+  font-size: 18px;
+  line-height: 2;
 }
-/* line 64, ../scss/base.scss */
-ul.posts li {
-  line-height: 1.75em;
+/* line 43, ../_scss/base.scss */
+body > .container {
+  background: transparent url('/img/bg-camo.png?1379213461') no-repeat top center;
+  padding-top: 1em;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
 }
-/* line 67, ../scss/base.scss */
-ul.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+/* line 48, ../_scss/base.scss */
+body > .footer {
+  margin-bottom: 0;
+  margin-top: 2em;
+  padding: 1.5em inherit;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0 inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.8) 0 1px 7px 0 inset;
+  background-color: rgba(0, 0, 0, 0.3);
 }
-
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-/* line 80, ../scss/base.scss */
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
+/* line 55, ../_scss/base.scss */
+body > .footer p {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
-/* line 87, ../scss/base.scss */
-.site .header a {
-  font-weight: bold;
+/* line 58, ../_scss/base.scss */
+body > .footer p a {
   text-decoration: none;
 }
-/* line 91, ../scss/base.scss */
-.site .header h1.title {
-  display: inline-block;
-  margin-bottom: 2em;
+
+/* line 66, ../_scss/base.scss */
+nav.navbar {
+  background: linear-gradient(#ffffff, #d7d7d7 5px);
+  border: 1px solid #333;
+  margin-top: 1em auto 1.5em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
-/* line 94, ../scss/base.scss */
-.site .header h1.title a {
-  color: #a00;
+/* line 73, ../_scss/base.scss */
+nav.navbar li.active {
+  background-color: #fff;
 }
-/* line 96, ../scss/base.scss */
-.site .header h1.title a:hover {
-  color: #000;
+/* line 78, ../_scss/base.scss */
+nav.navbar a {
+  color: #333;
+  font-weight: bold;
+  text-shadow: #d7d7d7 1px 1px 0;
 }
-/* line 101, ../scss/base.scss */
-.site .header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-/* line 104, ../scss/base.scss */
-.site .header a.extra:hover {
-  color: #000;
-}
-/* line 109, ../scss/base.scss */
-.site .meta {
-  color: #aaa;
-}
-/* line 112, ../scss/base.scss */
-.site .footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
-}
-/* line 118, ../scss/base.scss */
-.site .footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-/* line 121, ../scss/base.scss */
-.site .footer .contact a {
-  color: #8085C1;
-}
-/* line 125, ../scss/base.scss */
-.site .footer .rss {
-  margin-top: 1.1em;
-  margin-right: -0.2em;
-  float: right;
-}
-/* line 129, ../scss/base.scss */
-.site .footer .rss img {
-  border: 0;
+/* line 84, ../_scss/base.scss */
+nav.navbar .navbar-toggle {
+  color: #333;
+  padding: 5px 15px 0;
+  margin: 0 auto;
 }
 
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-/* standard */
-/* line 145, ../scss/base.scss */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+/**
+ * !Header
+ */
+/* line 95, ../_scss/base.scss */
+.header {
+  margin: auto -10px;
 }
-/* line 150, ../scss/base.scss */
-.post ul, .post ol {
-  margin-left: 1.35em;
-}
-/* line 153, ../scss/base.scss */
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
-/* line 159, ../scss/base.scss */
-.post pre code {
-  border: none;
-}
-/* line 162, ../scss/base.scss */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-/* line 166, ../scss/base.scss */
-.post pre.terminal code {
-  background-color: #333;
+/* line 98, ../_scss/base.scss */
+.header .title img {
+  width: 100%;
+  height: auto;
 }
 
-/* terminal */
+/**
+ * !Responsive
+ */
+@media (max-width: 768px) {
+  /* line 110, ../_scss/base.scss */
+  .header {
+    margin: auto -5px;
+  }
+}

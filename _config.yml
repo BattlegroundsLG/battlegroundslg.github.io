@@ -1,4 +1,4 @@
-title : Battlegounds
+title : Battlegrounds
 tagline: Live Action Gaming
 contact:
   email : contact@battlegrounds.net
@@ -7,3 +7,5 @@ contact:
 
 markdown: redcarpet
 pygments: true
+permalink: /:title
+

@@ -1,0 +1,113 @@
+/**
+ * @file
+ * custom overrides to bootstrap for Battlegrounds
+ */
+
+@import "compass";
+/**
+ * !Variables
+ */
+
+$color_background: #000;
+$color_text: #eee;
+$base_font: 18px;
+
+
+/**
+ * ! Text
+ */
+a {
+  color:$color_text;
+
+  article & {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: fuchsia;
+  }
+}
+
+
+/**
+ * !Global
+ */
+
+body {
+  background: $color_background image-url('bg-grid.png') repeat top left;
+  color: $color_text;
+  font-size: $base_font;
+  line-height: 2;
+
+ > .container {
+    background: transparent image-url('bg-camo.png') no-repeat top center;
+    padding-top: 1em;
+    @include background-size(100%);
+  }
+  > .footer {
+    margin-bottom: 0;
+    margin-top: 2em;
+    padding: 1.5em inherit;
+    @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0 inset);
+    background-color: rgba(0,0,0,0.3);
+
+    p {
+      padding-right:0 !important;
+      padding-left: 0 !important;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+}
+
+nav.navbar {
+  background: linear-gradient(color-stops(#fff, #d7d7d7 5px));
+  border: 1px solid #333;
+  margin-top: 1em auto 1.5em;
+  @include border-radius(4px);
+
+  li {
+    &.active {
+      background-color: #fff;
+    }
+  }
+
+  a {
+    color: #333;
+    font-weight: bold;
+    @include text-shadow(#d7d7d7 1px 1px 0);
+  }
+
+  .navbar-toggle {
+    color: #333;
+    padding: 5px 15px 0;
+    margin: 0 auto;
+  }
+}
+
+/**
+ * !Header
+ */
+
+.header {
+  margin: auto -10px;
+  .title {
+    img {
+      width:100%;
+      height: auto;
+    }
+  }
+}
+
+/**
+ * !Responsive
+ */
+
+@media (max-width: 768px) {
+  .header {
+    margin: auto -5px;
+  }
+}
