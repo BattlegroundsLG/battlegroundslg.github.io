@@ -1,3 +1,9 @@
-name: Your New Jekyll Site
+title : Battlegounds
+tagline: Live Action Gaming
+contact:
+  email : contact@battlegrounds.net
+  twitter: battlegroundsHQ
+  facebook: battlegroundsHQ
+
 markdown: redcarpet
 pygments: true
