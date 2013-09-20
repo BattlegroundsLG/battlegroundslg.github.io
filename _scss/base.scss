@@ -10,7 +10,6 @@
 
 $color_background: #000;
 $color_text: #eee;
-$base_font: 16px;
 
 
 /**
@@ -30,6 +29,30 @@ a {
 }
 
 
+.well {
+  @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0 inset);
+  background: #000;
+  background: rgba(0,0,0,0.3) none;
+  border-color: #000;
+
+}
+
+form.mailchimp {
+  text-align: center;
+  h3 {
+    margin-top: 0;
+  }
+}
+
+select,
+input,
+.uneditable-input {
+  @include border-radius(4px);
+  padding-right: .5em;
+  padding-left: .5em;
+  line-height: 2;
+}
+
 /**
  * !Global
  */
@@ -37,42 +60,23 @@ a {
 body {
   background: $color_background image-url('bg-grid.png') repeat top left;
   color: $color_text;
-  font-size: $base_font;
-  line-height: 2;
-
- > .container {
-    background: transparent image-url('bg-camo.png') no-repeat top center;
-    padding-top: 1em;
-    @include background-size(100%);
-  }
-  > .footer {
-    margin-bottom: 0;
-    margin-top: 2em;
-    padding: 1.5em inherit;
-    @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0 inset);
-    background-color: rgba(0,0,0,0.3);
-
-    p {
-      padding-right:0 !important;
-      padding-left: 0 !important;
-      a {
-        text-decoration: none;
-      }
-    }
-  }
-
 }
 
-nav.navbar {
-  background: linear-gradient(color-stops(#fff, #d7d7d7 5px));
+.page.container {
+  background: transparent image-url('bg-camo.png') no-repeat top center;
+  padding-top: 1em;
+  @include background-size(100%);
+}
+
+.navbar {
+  background-color: #d7d7d7;
+  background-image: linear-gradient(color-stops(#fff, #d7d7d7 5px));
   border: 1px solid #333;
   margin-top: 1em auto 1.5em;
   @include border-radius(4px);
 
-  li {
-    &.active {
-      background-color: #fff;
-    }
+  li.active {
+    background-color: #fff;
   }
 
   a {
@@ -87,6 +91,27 @@ nav.navbar {
     margin: 0 auto;
   }
 }
+
+.footer {
+  margin-bottom: 0;
+  margin-top: 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+    background-color: #000;
+  background-color: rgba(0,0,0,0.3);
+  @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0 inset);
+  p {
+    padding-right:0 !important;
+    padding-left: 0 !important;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+
 
 /**
  * !Header

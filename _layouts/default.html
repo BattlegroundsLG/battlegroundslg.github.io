@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }} | {{ site.title }}</title>
         <meta name="viewport" content="width=device-width">
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
         <!-- Twitter Bootstrap -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
         <!-- Font Awesome -->
@@ -14,7 +17,7 @@
 
     </head>
     <body>
-      <div class="container">
+      <div class="page container">
         <!-- Header -->
         <header class="header">
           <h1 class="title"><a href="/"><img src="/img/logo.png" alt="{{ site.title }} {{ site.tagline }}" class="img-responsive"/></a></h1>
