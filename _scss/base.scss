@@ -10,7 +10,7 @@
 
 $color_background: #000;
 $color_text: #eee;
-
+$font_size: 14px;
 
 /**
  * ! Text
@@ -29,12 +29,17 @@ a {
 }
 
 
+
+
 .well {
   @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0 inset);
   background: #000;
   background: rgba(0,0,0,0.3) none;
   border-color: #000;
-
+  margin-top: 2em;
+  > #{headings()} {
+    margin-top: 0;
+  }
 }
 
 form.mailchimp {
@@ -51,6 +56,7 @@ input,
   padding-right: .5em;
   padding-left: .5em;
   line-height: 2;
+  margin-bottom: 2em;
 }
 
 /**
@@ -58,7 +64,7 @@ input,
  */
 
 body {
-  background: $color_background image-url('bg-grid.png') repeat top left;
+  background: $color_background image-url('bg-grid.png') repeat top left fixed;
   color: $color_text;
 }
 
@@ -68,12 +74,22 @@ body {
   @include background-size(100%);
 }
 
+.container {
+  max-width: 750px;
+}
+
 .navbar {
   background-color: #d7d7d7;
   background-image: linear-gradient(color-stops(#fff, #d7d7d7 5px));
   border: 1px solid #333;
-  margin-top: 1em auto 1.5em;
+  margin: 0 auto 1.5em;
+  min-height: 40px;
   @include border-radius(4px);
+  .navbar-brand,
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
   li.active {
     background-color: #fff;
@@ -82,12 +98,13 @@ body {
   a {
     color: #333;
     font-weight: bold;
+    font-size: $font_size;
     @include text-shadow(#d7d7d7 1px 1px 0);
   }
 
   .navbar-toggle {
     color: #333;
-    padding: 5px 15px 0;
+    padding: 10px 15px 0;
     margin: 0 auto;
   }
 }
@@ -100,6 +117,10 @@ body {
     background-color: #000;
   background-color: rgba(0,0,0,0.3);
   @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0 inset);
+  .container {
+    padding-right:0;
+    padding-left: 0;
+  }
   p {
     padding-right:0 !important;
     padding-left: 0 !important;
