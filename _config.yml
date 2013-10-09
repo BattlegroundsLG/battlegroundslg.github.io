@@ -4,6 +4,7 @@ contact:
   email : contact@battlegrounds.net
   twitter: battlegroundsHQ
   facebook: battlegroundsHQ
+googleanalytics: UA-44676956-1
 
 markdown: redcarpet
 pygments: true
