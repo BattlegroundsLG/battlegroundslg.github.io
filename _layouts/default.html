@@ -65,7 +65,7 @@
           <div class="col-sm-8">
             {{ site.title }}<br />
             {{ site.tagline }}<br />
-            {{ site.contact.email }}
+            <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
           </div>
           <div class="col-sm-4">
             <div><a href="https://twitter.com/{{ site.contact.twitter }}" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @{{ site.contact.twitter }}</a></div>
