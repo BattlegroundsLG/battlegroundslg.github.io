@@ -2,128 +2,18 @@
 layout: default
 title: Media
 group: navigation
-permalink: media/index.html
-published: true
 ---
 
-<article id=“media”>
+{% for post in site.posts  %}
+<article class="well">
+  <h1>{{ post.date | date: "%B %-d, %Y"}}</h1>
 
-  
- <div class="well clearfix">
-      		<h4>September 5, 2014</h4>
-		<p>Trend Hunter had their monthly Fun Day at Battlegrounds and they made this sweet video to share the experience with you.</p>
+  {{ post.content }}
+
+  {% if post.video %}
   <div class="video-container">
-<iframe width="560" height="315" src="//www.youtube.com/embed/ZTc7ItjVt-M" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="{{ post.video }}" frameborder="0" allowfullscreen></iframe>
   </div>
-</div> 
-  
- 
-  
-  
-
-<div class="well clearfix">
-      		<h4>August 6, 2014</h4>
-		<p>Battlegrounds beta-test footage. Video is being recorded and streamed live to spectators.</p>
-  <div class="video-container">
-<iframe width="640" height="360" src="//www.youtube.com/embed/qeyCV-uxjQQ?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
-
-
-
-<div class="well clearfix">
-      		<h4>July 30, 2014</h4>
-		<p>Freshbooks and friends came in as our very first outside group to beta test.</p>
-		<p>First documented instance of the term “spamfire” as a legitimate tactic.</p>
-
-
-  <div class="video-container">
-<iframe width="640" height="360" src="//www.youtube.com/embed/M7i88J7x2Hk?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="well clearfix">
-      		<h4>July 25, 2014</h4>
-		<p>Raw GoPro footage from a recent beta test game.</p>
-		<p>10 minute King of the Hill game, the first 35 seconds of Red Team’s start.</p>
-		<p>Rob is testing electroshock level 3, which engages when his shields have been eliminated and he takes health damage. When a player takes shield damage, the vest vibrates.</p>
-
-  <div class="video-container">
-	<iframe align=“center” width="640" height="360" src="//www.youtube.com/embed/bM4cz5bfQPo?rel=0” frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
-
-  <div class="well clearfix">
-<h4>
-	<p>July 25, 2014</p></h4>
-	<p>Raw GoPro footage from a recent beta test game.</p>
-	<p>10 minute King of the Hill game, the first 60 seconds of Blue Team’s start.</p>
-	<p>3 sample weapon modes are being used for beta testing: <b>Assault Rifle</b>, <b>Shotgun</b> and <b>Laser Rifle</b>. Pressing the respawn button at the blue home base brings the player back into the game.</p>
-
-
-<div class="video-container">
-	<iframe align=“center” width="640" height="360" src="//www.youtube.com/embed/j4q9xl5eYAg?rel=0” frameborder="0" allowfullscreen></iframe>
-</div>
-
-</div>
-
-
-
-  <div class="well clearfix">
-<h4>
-	<p>January 16, 2014</p></h4>
-	<p>One of the first live tests with alpha prototypes. Eric is wearing an early electroshock prototype, and after having his shields wiped by a laser rifle volley, is eliminated with a single shotgun hit by Rob. Shotgun may have been slightly overpowered in this scenario.</p>
-
-<div class="video-container">
-
-<iframe width="640" height="360" src="//www.youtube.com/embed/ajJPZ1d2Ei0?rel=0” frameborder="0" allowfullscreen></iframe>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-<div class="well clearfix">
-<p>
-	Michael Hemsworth from <a src=“http://www.trendhunter.com”>Trendhunter</a> interviews Battlegrounds at OCE Discovery Days 2014.
-</p><p><b>Battlegrounds @ 1:07</b></p>
-
-<div class="video-container">
-	<iframe align=“center” width="640" height="360" src="//www.youtube.com/embed/sqb7y6eUV3w?rel=0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-</div>
-
-
-<div class="well clearfix">
-
-<p>
-	BNN stopped by our booth at OCE Discovery Days 2014, with a piece by Kristina Partsinevelos.
-</p><p><b>Battlegrounds @ 8:06</b></p>
-
-<a src=“http://www.bnn.ca/Video/player.aspx?vid=366902”>http://www.bnn.ca/Video/player.aspx?vid=366902</a>
-
-</div>
-
-
-
-
+  {% endif %}
 </article>
+{% endfor %}
