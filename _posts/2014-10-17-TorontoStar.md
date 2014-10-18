@@ -1,5 +1,7 @@
 ---
-published: false
+published: true
+title: Toronto Star play test
+category: media
 ---
 
 ## October 7, 2014
