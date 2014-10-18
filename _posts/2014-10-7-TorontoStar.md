@@ -2,7 +2,7 @@
 published: true
 title: Toronto Star play test
 category: media
-video: "http://brightcove04.brightcove.com/18/794267642001/201410/29/794267642001_3832877339001_Raju-BattlegroundsV2.mp4?playerId=2071349530001&lineupId=&affiliateId=&pubId=794267642001&videoId=3832750983001"
+video: "http://brightcove04.brightcove.com/18/794267642001/201410/29/794267642001_3832877339001_Raju-BattlegroundsV2.mp4"
 ---
 
 Raju Mudhar, from the Toronto Star, was in to interview our CEO, Miles, and play test our game. Here's what he uncovered at the office of Battlegrounds:  
