@@ -1,0 +1,78 @@
+/**
+ @file Reusable styles for Battlegrounds web apps
+**/
+@import "compass";
+/**
+ * !Variables
+ */
+
+$color_background: #333;
+$color_text: #eee;
+$font_size: 14px;
+
+$color_ammo     : #5bcf7a;
+$color_health   : #cf5c5d;
+$color_shield   : #5bb0cf;
+$color_location : #cf5bb0;
+$color_score    : $color_text;
+
+
+$neutral-team-color: #414141;
+$red-team-color: #ff0000;
+$blue-team-color: #0000ff;
+
+/**
+ * Mixins
+ */
+
+@mixin well {
+  @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0 inset);
+  background: rgba(0,0,0,0.3) none;
+  border-color: $color_background;
+}
+
+/**
+ * Battlegrounds Styles
+ */
+
+.well {
+  > #{headings()} {
+    margin-top: 0;
+  }
+}
+
+body {
+  background:$color_background image-url('bg-grid.png') repeat top left fixed;
+  color: $color_text;
+
+}
+
+.page {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include background-size(contain);
+  min-height: 100vh;
+}
+.navbar {
+  border-width: 0 0 1px 0;
+}
+
+
+.footer {
+//  @include well;
+  margin-bottom: 0;
+  margin-top: 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  .container {
+    padding-right:0;
+    padding-left: 0;
+  }
+  p {
+    padding-right:0 !important;
+    padding-left: 0 !important;
+    a {
+      text-decoration: none;
+    }
+  }
+}

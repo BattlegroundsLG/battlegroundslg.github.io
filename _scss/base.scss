@@ -64,14 +64,9 @@ input,
  */
 
 body {
-  background: $color_background image-url('bg-grid.png') repeat top left fixed;
+  background: $color_background;
   color: $color_text;
-}
-
-.page.container {
-  background: transparent image-url('bg-camo.png') no-repeat top center;
   padding-top: 1em;
-  @include background-size(100%);
 }
 
 .container {

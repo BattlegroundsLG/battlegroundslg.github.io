@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="col-sm-8">
+    Battlegrounds<br>
+    Live Gaming Experience<br>
+    <a href="mailto:contact@battlegrounds.net">contact@battlegrounds.net</a>
+  </div>
+  <div class="col-sm-4">
+    <a class="twitter-follow-button" href="https://twitter.com/BattlegroundsHQ" data-show-count="true" data-lang="en">
+    Follow @BattlegroundsHQ
+    </a>
+    <div class="fb-like fb_iframe_widget" data-href="http://facebook.com/battlegroundsHQ" data-width="180" data-colorscheme="dark" data-show-faces="true" data-send="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=40689804597&amp;color_scheme=dark&amp;href=http%3A%2F%2Ffacebook.com%2FbattlegroundsHQ&amp;locale=en_GB&amp;sdk=joey&amp;send=false&amp;show_faces=true&amp;width=180"><span style="vertical-align: bottom; width: 225px; height: 65px;"><iframe name="f1c0a78e8" width="180px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/plugins/like.php?app_id=40689804597&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FKFZn1BJ0LYk.js%3Fversion%3D41%23cb%3Df2670dc4b4%26domain%3Dbattlegrounds.net%26origin%3Dhttp%253A%252F%252Fbattlegrounds.net%252Ff33af6f6b%26relation%3Dparent.parent&amp;color_scheme=dark&amp;href=http%3A%2F%2Ffacebook.com%2FbattlegroundsHQ&amp;locale=en_GB&amp;sdk=joey&amp;send=false&amp;show_faces=true&amp;width=180" style="border: none; visibility: visible; width: 225px; height: 65px;" class=""></iframe></span></div>
+  </div>
+</div>
+<script id="facebook-jssdk" src="//connect.facebook.net/en_GB/all.js#xfbml=1&amp;appId=40689804597"></script>
+<div id="fb-root"></div>
+  <script type="text/javascript">
+    window.twttr = (function (d, s, id) {
+         var t, js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) return;
+         js = d.createElement(s); js.id = id;
+         js.src= "https://platform.twitter.com/widgets.js";
+         fjs.parentNode.insertBefore(js, fjs);
+         return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+       }(document, "script", "twitter-wjs"));
+     </script>
