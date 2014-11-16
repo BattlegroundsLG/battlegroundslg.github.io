@@ -5,6 +5,7 @@ contact:
   twitter: battlegroundsHQ
   facebook: battlegroundsHQ
 googleanalytics: UA-44676956-1
+basepath: '/'
 
 markdown: redcarpet
 highlighter: true

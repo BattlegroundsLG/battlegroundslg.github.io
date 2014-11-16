@@ -22,6 +22,8 @@ body {
   }
 }
 
+
+
 .flex-video {
   position: relative;
   padding-top: 25px;
@@ -30,6 +32,12 @@ body {
   margin-bottom: 16px;
   overflow: hidden;
   &.widescreen { padding-bottom: 57.25%; }
+  .site.listing .article & {
+    margin-top: -19px;
+    margin-left: -19px;
+    margin-right: -19px;
+  }
+
   iframe,
   object,
   embed {
@@ -49,5 +57,10 @@ body {
 }
 
 #team .bio {
-  padding-bottom: 2em;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 8% 60px 0;
+  img {
+    @include border-top-radius(4px);
+  }
 }

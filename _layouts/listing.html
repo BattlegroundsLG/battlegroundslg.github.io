@@ -7,12 +7,12 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      <title>{{ page.title }} | {{ site.name }}</title>
      <meta name="viewport" content="width=device-width">
-      <!-- Bootstrap-->
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" />
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/slate/bootstrap.min.css">
-      <!-- Custom CSS-->
-      <link rel="stylesheet" href="{{ site.basepath }}css/global.css">
+     <!-- Bootstrap-->
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" />
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/slate/bootstrap.min.css">
+     <!-- Custom CSS-->
+     <link rel="stylesheet" href="{{ site.basepath }}css/global.css">
 
      <!--[if lt IE 9]>
      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 
      <meta property="og:image" content=“/img/bg-banner_4playersredblue.jpg“ />
   </head>
-  <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="50">
+  <body>
       <!-- Navbar -->
       <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
@@ -34,24 +34,32 @@
         </div>
         <div class="navbar-collapse collapse in">
           <ul class="nav navbar-nav ">
-            <li><a href="#indiegogo">Indiegogo</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#press">Press</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="{{ site.basepath }}#indiegogo">Indiegogo</a></li>
+            <li><a href="{{ site.basepath }}#about">About</a></li>
+            <li><a href="{{ site.basepath }}#team">Team</a></li>
+            {% for nav in site.pages reversed %}
+            {% if nav.group == 'navigation' %}
+            {% if page.url == nav.url %}
+            <li class="active hidden-xs">
+              {% else %}
+            <li>
+              {% endif %}
+              <a href="{{ nav.url | remove:'index.html'}}">{{ nav.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            <li><a href="{{ site.basepath }}#contact">Contact Us</a></li>
           </ul>
         </div>
     </nav>
-<div class="page">
 
-    <div class="site">
+    <div class="site listing container js-masonry"
+         data-masonry-options='{ "columnWidth": 20, "gutter": 20, "itemSelector": ".article" }'>
 
     {{ content }}
 
     </div> <!-- .site -->
-</div>
+
     <footer class="footer well">
       <div class="container">
         {% include battlegrounds/footer %}
@@ -60,14 +68,16 @@
     <!-- Twitter Bootstrap -->
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="////cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
     <!-- Custom -->
     <script src="/js/scripts.js"></script>
     <script>
-      <!-- Twitter follow code -->
+
+      // Twitter follow code
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-      <!-- Facebook like script -->
+      // Facebook like script
       (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=40689804597"; fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
-      <!-- Google Analytics -->
+      // Google Analytics
       var _gaq = _gaq || [];_gaq.push(['_setAccount', '{{ site.googleanalytics }}']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
     </script>
     <div id="fb-root"></div>

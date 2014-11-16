@@ -42,26 +42,28 @@ $blue-team-color: #0000ff;
 }
 
 body {
-  background:$color_background image-url('bg-grid.png') repeat top left fixed;
+  background: $color_background image-url('bg-grid.png') repeat top left fixed;
   color: $color_text;
 
 }
 
 .page {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  background: transparent image-url('bg-camo.png') no-repeat top center fixed;
   @include background-size(contain);
   min-height: 100vh;
 }
 .navbar {
   border-width: 0 0 1px 0;
+  &-nav > li > a {
+    border-right-width: 0;
+    border-left-width: 0;
+  }
 }
 
 
 .footer {
 //  @include well;
   margin-bottom: 0;
-  margin-top: 2em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   .container {

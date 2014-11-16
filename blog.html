@@ -1,0 +1,20 @@
+---
+layout: listing
+title: Blog
+group: navigation
+permalink: blog/index.html
+---
+
+{% for post in site.posts  %}
+{% if post.category contains 'blog' %}
+<article class="well col-md-6">
+  {% if post.video %}
+  <div class="flex-video widescreen">
+    <iframe src="{{ post.video }}?html5=1&vq=small" frameborder="0" allowfullscreen></iframe>
+  </div>
+  {% endif %}
+  <h4>{{ post.date | date: "%B %-d, %Y"}}</h4>
+  {{ post.content }}
+</article>
+{% endif %}
+{% endfor %}

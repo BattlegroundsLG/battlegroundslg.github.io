@@ -1,0 +1,25 @@
+---
+layout: listing
+title: Press
+group: navigation
+permalink: press/index.html
+---
+
+{% for post in site.posts  %}
+{% if post.category contains 'media' %}
+<article class="article well col-md-5">
+  {% if post.video %}
+  <div class="flex-video widescreen">
+  <iframe src="{{ post.video }}?html5=1&vq=small" frameborder="0" allowfullscreen></iframe>
+  </div>
+  {% endif %}
+  <h4>{{ post.date | date: "%B %-d, %Y"}}</h4>
+  {{ post.content }}
+
+</article>
+{% endif %}
+{% endfor %}
+
+
+
+
