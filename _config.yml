@@ -5,7 +5,7 @@ contact:
   twitter: battlegroundsHQ
   facebook: battlegroundsHQ
 googleanalytics: UA-44676956-1
-basepath: '/'
+basepath: 'http://emarchak.github.io/battlegroundslg.github.io/'
 
 markdown: redcarpet
 highlighter: true
