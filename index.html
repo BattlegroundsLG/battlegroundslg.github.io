@@ -39,8 +39,8 @@ title: About
     <article class="bio panel col-sm-3">
       <img class="img-responsive" src="/img/diagram-player.png"/>
       <footer class="panel-footer">
-        <h4>Andrew Murray</h4>
-        <p>Software Designer</p>
+        <h4>Andrew Murray
+        <br/><small>Software Designer</small></h4>
         <p>Favourite game: Goat Simulator</p>
       </footer>
     </article>
@@ -48,8 +48,8 @@ title: About
     <article class="bio panel col-sm-3">
       <img class="img-responsive" src="/img/diagram-player.png"/>
       <footer class="panel-footer">
-        <h4>Harley Balabanian</h4>
-        <p>Systems Engineer</p>
+        <h4>Harley Balabanian
+        <br/><small>Systems Engineer</small></h4>
         <p>Favourite game: Goat Simulator</p>
       </footer>
     </article>
@@ -57,8 +57,8 @@ title: About
     <article class="bio panel col-sm-3">
       <img class="img-responsive" src="/img/diagram-player.png"/>
       <footer class="panel-footer">
-        <h4>Miles Bossons</h4>
-        <p>Founder & CEO</p>
+        <h4>Miles Bossons
+        <br/><small>Founder & CEO</small></h4>
         <p>Favourite game: Goat Simulator</p>
       </footer>
     </article>
@@ -66,8 +66,8 @@ title: About
     <article class="bio panel col-sm-3">
       <img class="img-responsive" src="/img/diagram-player.png"/>
       <footer class="panel-footer">
-      <h4>Katie McGuire</h4>
-        <p>Project Coordinator</p>
+        <h4>Katie McGuire
+        <br/><small>Project Coordinator</small></h4>
         <p>Favourite game: Goat Simulator</p>
       </footer>
     </article>
@@ -75,8 +75,8 @@ title: About
     <article class="bio panel col-sm-3">
       <img class="img-responsive" src="/img/diagram-player.png"/>
       <footer class="panel-footer">
-        <h4>Tom Zabev</h4>
-        <p>Systems Engineer</p>
+        <h4>Tom Zabev
+        <br/><small>Systems Engineer</small></h4>
         <p>Favourite game: Goat Simulator</p>
       </footer>
     </article>
@@ -84,8 +84,8 @@ title: About
     <article class="bio panel col-sm-3">
       <img class="img-responsive" src="/img/diagram-player.png"/>
       <footer class="panel-footer">
-        <h4>Pat Quinn</h4>
-        <p>Events Coordinator</p>
+        <h4>Pat Quinn
+        <br/><small>Events Coordinator</small></h4>
         <p>Favourite game: Goat Simulator</p>
       </footer>
     </article>
@@ -93,8 +93,8 @@ title: About
     <article class="bio panel col-sm-3">
       <img class="img-responsive" src="/img/diagram-player.png"/>
       <footer class="panel-footer">
-        <h4>Donald Papp</h4>
-        <p>Electrical Engineer</p>
+        <h4>Donald Papp
+        <br/><small>Electrical Engineer</small></h4>
         <p>Favourite game: Goat Simulator</p>
       </footer>
     </article>
@@ -102,8 +102,8 @@ title: About
     <article class="bio panel col-sm-3">
       <img class="img-responsive" src="/img/diagram-player.png"/>
       <footer class="panel-footer">
-        <h4>Gareth Fowler</h4>
-        <p>Graphic Designer</p>
+        <h4>Gareth Fowler
+        <br/><small>Graphic Designer</small></h4>
         <p>Favourite game: Goat Simulator</p>
       </footer>
     </article>
@@ -111,9 +111,20 @@ title: About
   </div>
 </section>
 
-<section id="press">
+<section id="press" class="well">
   <div class="container">
-    <h1>In the Media</h1>
+    <h1>Press</h1>
+    <blockquote>
+      <p>The company wants to bring Laser Tag into the 21st century.</p>
+      <footer><a href="http://www.thestar.com/business/2014/10/13/laser_tag_with_the_halo_effect.html">Toronto Star</a></footer>
+    </blockquote>
+    <blockquote class="blockquote-reverse">
+      <p>It is more realistic than laser tag but less dangerous than paintball, but more fun than both put together.</p>
+      <footer><a href="http://www.trendhunter.com/trends/live-gaming-experience">Trendhunter</a></footer>
+    </blockquote>
+    <div class="col-sm-3 col-sm-offset-9">
+      <button type="button" class=" btn btn-default btn-block"><a href="/media">Read More</a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+    </div>
   </div>
 </section>
 
@@ -150,6 +161,21 @@ title: About
 <section id="blog">
   <div class="container">
     <h1>Blog</h1>
+
+    {% for post in site.categories.blog limit:3  %}
+    <article class="well col-md-4">
+      {% if post.video %}
+      <div class="flex-video widescreen">
+        <iframe src="{{ post.video }}?html5=1&vq=small" frameborder="0" allowfullscreen></iframe>
+      </div>
+      {% endif %}
+      <h4>{{ post.date | date: "%B %-d, %Y"}}</h4>
+      {{ post.content }}
+      <button type="button" class=" btn btn-default btn-block"><a href="/blog">Read More</a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+    </article>
+    {% endfor %}
+
+
   </div>
 </section>
 
