@@ -13,8 +13,10 @@ title: About
 
 <section id="about" class="well">
   <h1>About</h1>
+
   <article class="container">
-    <h4>Founded in 2012, our mission at Battlegrounds is to build an advanced technology laser tag facility that creates a live gaming experience inspired by our love of video games.</h4>
+    <div class="row"><div class="col-xs-12">
+    <p class="lead">Founded in 2012, our mission at Battlegrounds is to build an advanced technology laser tag facility that creates a live gaming experience inspired by our love of video games.</p>
 
     <p>We share a love of video games as well as combat sports - Halo and Mass Effect to paintball and airsoft. We’ve seen video games evolve considerably over the last 15 years, but objective-based combat sports have not.</p>
 
@@ -29,7 +31,9 @@ title: About
     </ul>
 
     <p>Through team-based competitive play, individual stat tracking, responsive field objectives, and force-feedback player hardware, we are creating a brand-new live gaming experience previewing in September 2014 and launching 2015.</p>
+    </div></div>
   </article>
+
 </section>
 
 <section id="team">
@@ -92,7 +96,7 @@ title: About
     </article>
 
     <article class="bio panel col-sm-2 col-xs-6 col-sm-offset-1">
-      <img class="img-responsive" src="{{ site.basepath }}img/team/donald_alt.png"/>
+      <img class="img-responsive" src="{{ site.basepath }}img/team/donald_alt.jpg"/>
       <footer class="panel-footer">
         <h4>Donald Papp
         <br/><small>Electrical Engineer</small></h4>
@@ -105,7 +109,7 @@ title: About
 
 <section id="press" class="well">
   <h1>Press</h1>
-  <div class="container">
+  <div class="container"><div class="row">
 
     <blockquote>
       <p>The company wants to bring Laser Tag into the 21st century.</p>
@@ -115,10 +119,10 @@ title: About
       <p>It is more realistic than laser tag but less dangerous than paintball, but more fun than both put together.</p>
       <footer><a href="http://www.trendhunter.com/trends/live-gaming-experience">Trendhunter</a></footer>
     </blockquote>
-    <div class="col-sm-3 col-sm-offset-9">
+    <footer class="col-sm-6 col-sm-offset-3 col-xs-12">
       <button type="button" class=" btn btn-default btn-block"><a href="{{ site.basepath }}media">Read More</a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
-    </div>
-  </div>
+    </footer>
+  </div></div>
 </section>
 
 <section id="gallery">
@@ -127,10 +131,29 @@ title: About
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="img/featured/IMG_5128.jpg" alt="Demo Image">
+        <img src="img/featured/2000/bggallery1.jpg" class="lazy lg" alt="Red team holding their position.">
+        <img src="img/featured/720/bggallery1.jpg" class="lazy sm" alt="Red team holding their position.">
+        <div class="carousel-caption"><p>Red team holding their position.</p></div>
       </div>
       <div class="item">
-        <img src="img/featured/IMG_5128.jpg" alt="Demo Image">
+        <img src="img/featured/2000/bggallery2.jpg" class="lazy lg" alt="A player carefully choosing their target.">
+        <img src="img/featured/720/bggallery2.jpg" class="lazy sm" alt="A player carefully choosing their target.">
+        <div class="carousel-caption"><p>A player carefully choosing their target.</p></div>
+      </div>
+      <div class="item">
+        <img src="img/featured/2000/bggallery3.jpg" class="lazy lg" alt="Red team preparing for a game.">
+        <img src="img/featured/720/bggallery3.jpg" class="lazy sm" alt="Red team preparing for a game.">
+        <div class="carousel-caption"><p>Red team preparing for a game.</p></div>
+      </div>
+      <div class="item">
+        <img src="img/featured/2000/bggallery4.jpg" class="lazy lg" alt="Blue team defending their position.">
+        <img src="img/featured/720/bggallery4.jpg" class="lazy sm" alt="Blue team defending their position.">
+        <div class="carousel-caption"><p>Blue team defending their position.</p></div>
+      </div>
+      <div class="item">
+        <img src="img/featured/2000/bggallery5.jpg" class="lazy lg" alt="Teams relaxing after a game.">
+        <img src="img/featured/720/bggallery5.jpg" class="lazy sm" alt="Teams relaxing after a game.">
+        <div class="carousel-caption"><p>Teams relaxing after a game.</p></div>
       </div>
     </div>
 
@@ -148,6 +171,9 @@ title: About
     <ol class="carousel-indicators">
       <li data-target="#gallery-wide" data-slide-to="0" class="active"></li>
       <li data-target="#gallery-wide" data-slide-to="1"></li>
+      <li data-target="#gallery-wide" data-slide-to="2"></li>
+      <li data-target="#gallery-wide" data-slide-to="3"></li>
+      <li data-target="#gallery-wide" data-slide-to="4"></li>
     </ol>
   </div>
 </section>
@@ -159,36 +185,51 @@ title: About
     {% for post in site.categories.blog limit:3  %}
     <article class="row">
       {% if post.videoid %}
-      <a href="http://youtube.com/watch?v={{ post.videoid }}" class="video col-sm-4">
-        <img src="http://img.youtube.com/vi/{{ post.videoid }}/hqdefault.jpg" class="video img-responsive"/>
+      <a href="http://youtube.com/watch?v={{ post.videoid }}" class="video col-sm-4 col-xs-12">
+        <img src="http://img.youtube.com/vi/{{ post.videoid }}/hqdefault.jpg" class="video img-responsive col-xs-12"/>
         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
       </a>
       {% endif %}
-      <div class="col-sm-8">
+      <div class="col-sm-8 col-xs-12">
         <h4>{{ post.date | date: "%B %-d, %Y"}}</h4>
         {{ post.content }}
       </div>
     </article>
     {% endfor %}
-    <button type="button" class=" btn btn-default btn-block"><a href="{{ site.basepath }}blog">Read More</a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+    <div class="row"><footer class="col-sm-6 col-sm-offset-3 col-xs-12">
+      <button type="button" class=" btn btn-default btn-block"><a href="{{ site.basepath }}blog">Read More</a><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+    </footer></div>
   </div>
 </section>
 
 <section id="contact">
   <h1>Contact Us</h1>
-  <!-- Begin MailChimp Signup Form -->
-  <div id="mc_embed_signup" class="container">
-    <form action="http://battlegrounds.us7.list-manage.com/subscribe/post?u=b2c990b843cd7422100f50713&amp;id=078b9add0f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate mailchimp form-inline clearfix  well" target="_blank" novalidate>
-      <h3>Fresh updates, straight to your inbox!</h3>
-      <label for="mce-EMAIL" class="sr-only">Email Address </label>
-      <input type="email" value="" name="EMAIL" placeholder="you@email.com" class="required col-xs-12 col-sm-offset-1 col-sm-6 email" id="mce-EMAIL">
-      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button col-xs-12 col-sm-offset-1 col-sm-3 btn btn-success">
-      <div id="mce-responses">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>
-    </form>
-  </div>
-  <!--End mc_embed_signup-->
+  <div class="container"><div class="row">
+    <dl class="col-sm-6 col-xs-12">
+      <dt>For general or media related inquires:</dt>
+      <dd><a href="mailto:contact@battlegrounds.net">contact@battlegrounds.net</a></dd>
+
+      <dt>For info about gaming or bookings:</dt>
+      <dd><a href="mailto:gaming@battlegrounds.net">gaming@battlegrounds.net</a></dd>
+
+      <dt>For business or investor related inquiries:</dt>
+      <dd><a href="mailto:business@battlegrounds.net">business@battlegrounds.net</a></dd>
+
+    </dl>
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup" class="col-sm-6 col-xs-12">
+      <form action="http://battlegrounds.us7.list-manage.com/subscribe/post?u=b2c990b843cd7422100f50713&amp;id=078b9add0f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate mailchimp form-inline clearfix  well" target="_blank" novalidate>
+        <h3>Sign up for our mailing list. <br/><small>Fresh updates, straight to your inbox!</small></h3>
+        <label for="mce-EMAIL" class="sr-only">Email Address </label>
+        <input type="email" value="" name="EMAIL" placeholder="you@email.com" class="required col-xs-12 col-sm-offset-1 col-sm-6 email" id="mce-EMAIL">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button col-xs-12 col-sm-offset-1 col-sm-3 btn btn-success">
+        <div id="mce-responses">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+      </form>
+    </div>
+    <!--End mc_embed_signup-->
+  </div></div>
 
 </section>

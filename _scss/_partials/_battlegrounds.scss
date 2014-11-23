@@ -83,6 +83,11 @@ body {
 
 .video {
   position:relative;
+  padding-bottom: 19px;
+  img {
+    width: 100%;
+    padding:0;
+  }
   .glyphicon {
     display: block;
     font-size: 2em;
@@ -103,3 +108,8 @@ body {
 .btn:hover {
   background-image: none;
 }
+
+dd {
+  padding-bottom:1em;
+}
+

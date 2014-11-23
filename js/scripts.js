@@ -8,6 +8,7 @@
 
   $(function () {
     $(".collapse").collapse()
+    $("img.lazy").lazyload();
   })
 
 }(window.jQuery);
