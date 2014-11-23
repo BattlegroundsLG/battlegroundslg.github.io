@@ -6,15 +6,19 @@ permalink: press/index.html
 ---
 
 {% for post in site.categories.media  %}
-<article class="article well col-md-5">
+<article class="article well row">
   {% if post.video %}
-  <div class="flex-video widescreen">
-  <iframe src="{{ post.video }}?html5=1&vq=small" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <a href="{{ post.video }}" class="video col-xs-4">
+    <img src="http://img.youtube.com/vi/{{ post.video | replace: 'http://youtube.com/watch?v=', '' }}/hqdefault.jpg" class="video img-responsive col-xs-12"/>
+    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+  </a>
+  <div class="col-xs-8">
+  {% else %}
+  <div class="col-xs-12">
   {% endif %}
-  <h4>{{ post.date | date: "%B %-d, %Y"}}</h4>
+  <h4>{{ post.title }}<br/> <small>{{ post.date | date: "%B %-d, %Y"}}</small></h4>
   {{ post.content }}
-
+  </div>
 </article>
 {% endfor %}
 

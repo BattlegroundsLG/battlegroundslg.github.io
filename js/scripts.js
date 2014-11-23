@@ -11,10 +11,11 @@
     $("img.lazy").lazyload();
   })
 
-  $("#indieCountDown").countdown("2014/12/01", function(event) {
-    $(this).text(
-       event.strftime('%Dd %Hh %Mm %Ss')
-       );
-    });
-
+  try {
+    $("#indieCountDown").countdown("2014/12/01", function(event) {
+      $(this).text(
+         event.strftime('%Dd %Hh %Mm %Ss')
+         );
+      });
+  }   catch(err) {}
 }(window.jQuery);

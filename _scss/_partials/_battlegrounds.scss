@@ -57,11 +57,15 @@ body {
   border-width: 0 0 1px 0;
   background-image: none;
   &-nav > li > a {
+    text-decoration: none;
     border-right-width: 0;
     border-left-width: 0;
   }
 }
 
+a {
+  text-decoration: underline;
+}
 
 .footer {
 //  @include well;

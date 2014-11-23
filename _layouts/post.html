@@ -1,9 +1,15 @@
 ---
-layout: default
+layout: post
 ---
 <h2>{{ page.title }}</h2>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 <article class="post">
+  {% if post.video %}
+  <a href="{{ post.video }}" class="video col-xs-4">
+    <img src="http://img.youtube.com/vi/{{ post.video | replace: 'http://youtube.com/watch?v=', '' }}/hqdefault.jpg" class="video img-responsive col-xs-12"/>
+    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+  </a>
+  {% endif %}
 {{ content }}
 </article>
