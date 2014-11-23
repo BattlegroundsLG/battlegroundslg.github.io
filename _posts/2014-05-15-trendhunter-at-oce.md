@@ -1,6 +1,6 @@
 ---
 title: Trendhunter at OCE Discovery Days 2014.
-videoid: sqb7y6eUV3w
+video: http://youtube.com/watch?v=sqb7y6eUV3w
 category: media
 ---
 

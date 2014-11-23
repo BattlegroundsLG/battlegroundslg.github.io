@@ -1,6 +1,6 @@
 ---
 title: GoPro footage of a Beta Test game (red team)
-videoid: bM4cz5bfQPo
+video: http://youtube.com/watch?v=bM4cz5bfQPo
 category: media
 ---
 
