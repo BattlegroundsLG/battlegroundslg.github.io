@@ -125,7 +125,7 @@ section {
     background: $color_background_header;
     z-index: 100;
     top: 33%;
-    transform: rotate(3deg);
+    @include rotate(3deg);
     width: 110%;
     text-transform: none;
     padding: 0 0;
