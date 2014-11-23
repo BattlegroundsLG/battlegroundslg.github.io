@@ -1,6 +1,6 @@
 ---
 title: Trendhunter Fun Day
-video: //www.youtube.com/embed/ZTc7ItjVt-M
+videoid: ZTc7ItjVt-M
 category: media
 ---
 

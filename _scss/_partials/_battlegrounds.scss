@@ -8,6 +8,7 @@
 
 $color_background: #333;
 $color_text: #eee;
+$color_background_header: #000;
 $font_size: 14px;
 
 $color_ammo     : #5bcf7a;
@@ -36,24 +37,25 @@ $blue-team-color: #0000ff;
  */
 
 .well {
+  border-width: 0;
+
   > #{headings()} {
     margin-top: 0;
   }
 }
 
 body {
-  background: $color_background image-url('bg-grid.png') repeat top left fixed;
+  background: $color_background repeat top left fixed;
   color: $color_text;
 
 }
 
 .page {
-  background: transparent image-url('bg-camo.png') no-repeat top center fixed;
-  @include background-size(contain);
   min-height: 100vh;
 }
 .navbar {
   border-width: 0 0 1px 0;
+  background-image: none;
   &-nav > li > a {
     border-right-width: 0;
     border-left-width: 0;
@@ -77,4 +79,27 @@ body {
       text-decoration: none;
     }
   }
+}
+
+.video {
+  position:relative;
+  .glyphicon {
+    display: block;
+    font-size: 2em;
+    position: absolute;
+    text-align: center;
+    background: #e62117;
+    top: 45%;
+    width: 15%;
+    line-height: 1.5em;
+    left: 43%;
+    border-radius: 5px !important;
+    @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0);
+    @include opacity(0.9);
+  }
+}
+
+.btn,
+.btn:hover {
+  background-image: none;
 }

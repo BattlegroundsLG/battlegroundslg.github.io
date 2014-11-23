@@ -1,6 +1,6 @@
 ---
 title: Freshbooks and friends
-video: //www.youtube.com/embed/M7i88J7x2Hk
+videoid: M7i88J7x2Hk
 category: media
 ---
 

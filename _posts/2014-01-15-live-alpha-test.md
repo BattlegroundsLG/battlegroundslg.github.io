@@ -1,6 +1,6 @@
 ---
 title: Battlegrounds alpha-test footage
-video: //www.youtube.com/embed/ajJPZ1d2Ei0
+videoid: ajJPZ1d2Ei0
 category: media
 ---
 

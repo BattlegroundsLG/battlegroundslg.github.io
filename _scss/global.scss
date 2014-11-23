@@ -13,6 +13,10 @@ body {
   padding-top: 50px;
 }
 
+* {
+  border-radius: 0 0 0 0 !important;
+}
+
 .pager {
   .previous a::before {
     content: "< "
@@ -57,11 +61,35 @@ body {
 #team .bio {
   padding-left: 0;
   padding-right: 0;
-  margin: 0 0 60px 0;
-  @media only screen and (min-width : 768px) {
-    margin-left: 8%;
+  @media only screen and (min-device-width: 768px) {
+   h4 { word-spacing: 50em; }
+   small {word-spacing: normal; }
   }
-  img {
-    @include border-top-radius(4px);
+  @media only screen and (max-device-width: 768px) {
+   img { width: 100% !important; }
+  }
+}
+
+section {
+  &.well {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  & > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    padding: 0.75em 0;
+    letter-spacing: 0.1em;
+    text-shadow: rgba(0, 0, 0, 0.298039) 1px 1px 1px;
+  }
+}
+
+#blog,
+#press {
+  .btn {
+    margin-top: 19px;
   }
 }

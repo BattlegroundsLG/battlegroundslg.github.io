@@ -1,6 +1,6 @@
 ---
 title: Battlegrounds beta-test footage
-video: //www.youtube.com/embed/qeyCV-uxjQQ
+videoid: qeyCV-uxjQQ
 category: media
 ---
 
