@@ -34,6 +34,7 @@
     <footer class="footer well">
       <div class="container">
         {% include battlegrounds/footer %}
+        <p><small>Game footage provided by Trendhunter</small></p>
       </div>
     </footer>
     <!-- Twitter Bootstrap -->
@@ -56,7 +57,7 @@
            e.preventDefault();
            var hash = this.hash;
            $('html, body').animate({
-               scrollTop: $(this.hash).offset().top - 80
+               scrollTop: $(this.hash).offset().top - 50
              }, 300, function(){
                window.location.hash = hash;
              });
@@ -78,6 +79,19 @@
             img.attr('src', src.replace('_alt.jpg', '.jpg'));
           }
         );
+
+        // xBrowser video loop.
+        var loopVideo = $('#indegogo video');
+        if (typeof loopVideo.loop == 'boolean') {
+          loopVideo.loop = true;
+        }
+        else {
+          loopVideo.on('ended', function () {
+          this.currentTime = 0;
+          this.Play();
+          }, false);
+        }
+        loopVideo.Play();
 
       }(window.jQuery);
       <!-- Twitter follow code -->
