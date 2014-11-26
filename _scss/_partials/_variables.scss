@@ -1,6 +1,37 @@
+/**
+ * !Variables
+ */
 
+@charset "UTF-8";
+@import "compass";
 
 // Port of Compass media query variables
 $screen-md-min: 992px !default;
 $screen-sm-min: 768px !default;
 $screen-lg-min: 1200px !default;
+
+$color_background: #333;
+$color_text: #eee;
+$color_background_header: #000;
+$font_size: 14px;
+
+$color_ammo     : #5bcf7a;
+$color_health   : #cf5c5d;
+$color_shield   : #5bb0cf;
+$color_location : #cf5bb0;
+$color_score    : $color_text;
+
+
+$neutral-team-color: #414141;
+$red-team-color: #ff0000;
+$blue-team-color: #0000ff;
+
+/**
+ * Mixins
+ */
+
+@mixin well {
+  @include box-shadow(rgba(255,255,255,0.1) 0 1px 0,rgba(0,0,0,0.8) 0 1px 7px 0 inset);
+  background: rgba(0,0,0,0.3) none;
+  border-color: $color_background;
+}

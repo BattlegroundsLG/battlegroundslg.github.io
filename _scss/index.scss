@@ -1,0 +1,91 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+@import "_partials/_variables";
+
+#team .bio {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 60px;
+  background: #3e444c;
+  img { width: 100% !important; }
+  @media only screen and (min-device-width: $screen-sm-min) {
+    h4 { word-spacing: 50em; }
+    small {word-spacing: normal; }
+  }
+  @media only screen and (max-width: $screen-sm-min) {
+   h4 { word-spacing: normal; }
+  }
+}
+
+#gallery {
+  overflow-x: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+  img.lg { display: block; }
+  img.sm { display: none; }
+  @media only screen and (max-width: $screen-sm-min) {
+    img.lg { display: none; }
+    img.sm { display: block; }
+  }
+}
+
+#indiegogo {
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+
+  h1 {
+    position: absolute;
+    width: 110%;
+    left: -5%;
+    background: $color_background_header;
+    z-index: 100;
+    top: 33%;
+    @include rotate(3deg);
+
+    text-transform: none;
+    padding: 0 0;
+    a {
+      padding: 0.75em 5em;
+       @media only screen and (max-width: $screen-sm-min) {
+         padding-left: 1em;
+         padding-right: 2em;
+       }
+      display: block;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        background: $color_background;
+      }
+    }
+  }
+  video {
+    width: 100%;
+    display: block;
+    @include opacity(0.5);
+  }
+}
+
+#contact {
+  dl {
+    text-align: center;
+    padding: 19px 15px;
+  }
+
+  #mc_embed_signup {
+    h3 {
+      text-align: center;
+    }
+
+    input {
+      padding: 8px 12px;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+  }
+}

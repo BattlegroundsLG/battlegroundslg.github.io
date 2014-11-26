@@ -3,9 +3,6 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@charset "UTF-8";
-
-@import "_partials/_variables";
 @import "_partials/_battlegrounds";
 
 body {
@@ -49,31 +46,21 @@ body {
     width: 100%;
     height: 100%;
   }
-  @media only screen and (max-width: 800px),
+  @media only screen and (max-width: $screen-md-min),
   only screen and (device-width: 1024px) and (device-height: 600px),
   only screen and (width: 1280px) and (orientation: landscape),
-  only screen and (device-width: 800px),
-  only screen and (max-width: 767px) {
+  only screen and (device-width: $screen-md-min),
+  only screen and (max-width: $screen-sm-min) {
     padding-top: 0;
   }
 }
 
-#team .bio {
-  padding-left: 0;
-  padding-right: 0;
-  img { width: 100% !important; }
-  @media only screen and (min-device-width: 768px) {
-    h4 { word-spacing: 50em; }
-    small {word-spacing: normal; }
-  }
-  @media only screen and (max-width: 768px) {
-   h4 { word-spacing: normal; }
-  }
-}
+section,
+.footer {
+    padding-bottom: 60px;
+    padding-top: 60px;
 
-section {
   &.well {
-    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
@@ -81,67 +68,18 @@ section {
   & > h1 {
     text-align: center;
     text-transform: uppercase;
-    margin-top: 0;
-    padding: 0.75em 0;
+    margin: 0 auto;
+    padding: 0 0 60px;
     letter-spacing: 0.1em;
     text-shadow: rgba(0, 0, 0, 0.298039) 1px 1px 1px;
   }
-}
 
-#blog,
-#press,
-#gallery {
   .btn {
-    margin-top: 19px;
-  }
-}
-
-#mc_embed_signup {
-  h3 {
-    text-align: center;
-  }
-
-  input {
-    padding: 8px 12px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-}
-
-#gallery {
-  img.lg { display: block; }
-  img.sm { display: none; }
-  @media only screen and (max-width: 768px) {
-    img.lg { display: none; }
-    img.sm { display: block; }
+    margin-top: 60px;
   }
 }
 
 
-#indiegogo {
-  position:relative;
-  h1 {
-    position:absolute;
-    background: $color_background_header;
-    z-index: 100;
-    top: 33%;
-    @include rotate(3deg);
-    width: 110%;
-    text-transform: none;
-    padding: 0 0;
-    a {
-      padding: 0.75em 0;
-      display:block;
-      text-decoration:none;
-      &:hover {
-        text-decoration: none;
-        background: $color_background;
-      }
-    }
-  }
-  video {
-    width:100%;
-    display: block;
-    @include opacity(0.25);
-  }
-}
+// Page specific styles.
+
+@import "index";

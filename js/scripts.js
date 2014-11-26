@@ -2,6 +2,17 @@
  * @file
  * scripts for battlegrounds
  */
+function equalHeight(group) {
+  tallest = 0;
+  group.each(function() {
+    thisHeight = $(this).height();
+    if(thisHeight > tallest) {
+      tallest = thisHeight;
+    }
+  });
+  group.height(tallest);
+}
+
 !function ($) {
 
   "use strict"; // jshint ;_;
@@ -11,11 +22,4 @@
     $("img.lazy").lazyload();
   })
 
-  try {
-    $("#indieCountDown").countdown("2014/12/01", function(event) {
-      $(this).text(
-         event.strftime('%Dd %Hh %Mm %Ss')
-         );
-      });
-  }   catch(err) {}
 }(window.jQuery);

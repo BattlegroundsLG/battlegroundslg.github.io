@@ -23,7 +23,7 @@
             <li><a href="#team">Team</a></li>
             <li><a href="#press">Press</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#blog">Blog</a></li>
+            {% comment %}<li><a href="#blog">Blog</a></li>{% endcomment %}
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
@@ -44,6 +44,42 @@
     <script src="{{ site.basepath }}js/jquery.countdown.min.js"></script>
     <script src="{{ site.basepath }}js/scripts.js"></script>
     <script>
+      !function ($) {
+         // Handle the countdown.
+        $("#indieCountDown").countdown("2015/01/12", function(event) {
+          $(this).text(
+               event.strftime('%D days left in our Indiegogo')
+             );
+        });
+         // Sexy scrolling.
+        $("#nav ul li a[href^='#']").on('click', function(e) {
+           e.preventDefault();
+           var hash = this.hash;
+           $('html, body').animate({
+               scrollTop: $(this.hash).offset().top - 80
+             }, 300, function(){
+               window.location.hash = hash;
+             });
+        });
+
+        // Even height on bios.
+        equalHeight($(".bio"));
+
+        //Alt images
+        $('.bio').hover(
+          function() {
+            var img = $(this).find('img'),
+                src = img.attr('src');
+            img.attr('src', src.replace('.jpg', '_alt.jpg'));
+          },
+          function() {
+            var img = $(this).find('img'),
+                src = img.attr('src');
+            img.attr('src', src.replace('_alt.jpg', '.jpg'));
+          }
+        );
+
+      }(window.jQuery);
       <!-- Twitter follow code -->
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
       <!-- Facebook like script -->
