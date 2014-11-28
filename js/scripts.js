@@ -23,3 +23,9 @@ function equalHeight(group) {
   })
 
 }(window.jQuery);
+
+if (!window.console) {
+  window.console = {};
+}
+
+console.log('Pew pew lasers!');

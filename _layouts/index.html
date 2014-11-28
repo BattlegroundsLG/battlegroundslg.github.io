@@ -47,13 +47,12 @@
     <script>
       !function ($) {
          // Handle the countdown.
-        $("#indieCountDown").countdown("2015/01/12", function(event) {
-          $(this).text(
-               event.strftime('%D days left in our Indiegogo')
-             );
+        $('#indieCountDown').countdown('2015/01/12', function(event) {
+          $(this).text(event.strftime('%D days left in our Indiegogo'));
         });
+
          // Sexy scrolling.
-        $("#nav ul li a[href^='#']").on('click', function(e) {
+        $('#nav ul li a[href^="#"]').on('click', function(e) {
            e.preventDefault();
            var hash = this.hash;
            $('html, body').animate({
@@ -63,8 +62,11 @@
              });
         });
 
-        // Even height on bios.
-        equalHeight($(".bio"));
+        // Even height on bio footers.
+        equalHeight($('.bio').find('footer'));
+        $( window ).resize(function() {
+          equalHeight($('.bio').find('footer'));
+        });
 
         //Alt images
         $('.bio').hover(
