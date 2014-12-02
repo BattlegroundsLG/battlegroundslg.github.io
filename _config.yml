@@ -11,3 +11,5 @@ markdown: redcarpet
 highlighter: true
 permalink: /:title
 
+gems:
+  - jekyll-redirect-from
