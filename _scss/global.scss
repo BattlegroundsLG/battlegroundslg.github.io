@@ -78,8 +78,7 @@ section,
   }
 }
 
-
-// Page specific styles.
+// Listing layout styles.
 .listing {
   padding-top: 60px;
 
@@ -90,6 +89,32 @@ section,
     padding-right: 45px; // 15px padding for rows
     margin-bottom: 60px;
 
+  }
+}
+// Default layout styles.
+header.banner {
+  background: transparent url('../img/featured/720/bggallery2.jpg') no-repeat center center;
+  height: 200px;
+  @include background-size(cover);
+  @media only screen and (min-width: $screen-sm-min){
+    background-image: url('../img/featured/2000/bggallery2.jpg');
+    min-height: 300px;
+  }
+
+}
+h1.page-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0 0 60px;
+  letter-spacing: 0.1em;
+  text-shadow: rgba(0,0,0,0.29804) 1px 1px 1px;
+  margin: -120px auto 60px;
+  background-color: transparent;
+  @media only screen and (min-width: $screen-sm-min){
+    background-color: inherit;
+    margin: 0 auto;
+    padding-top: 60px;
   }
 }
 
