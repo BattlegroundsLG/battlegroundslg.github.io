@@ -32,4 +32,4 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <meta property="og:image" content=“{{ site.basepath }}img/bg-banner_4playersredblue.jpg“ />
+  <meta property="og:image" content="{{ site.basepath }}img/bg-banner_4playersredblue.jpg" />

@@ -80,5 +80,17 @@ section,
 
 
 // Page specific styles.
+.listing {
+  padding-top: 60px;
+
+  .article {
+    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-left: 45px;
+    padding-right: 45px; // 15px padding for rows
+    margin-bottom: 60px;
+
+  }
+}
 
 @import "_index";

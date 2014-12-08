@@ -194,16 +194,7 @@ title: About
 
     {% for post in site.categories.blog limit:3  %}
     <article class="row">
-      {% if post.video %}
-      <a href="{{ post.video }}" class="video col-xs-4">
-        <img src="http://img.youtube.com/vi/{{ post.video | replace: 'http://youtube.com/watch?v=', '' }}/hqdefault.jpg" class="video img-responsive col-xs-12"/>
-        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-      </a>
-      {% endif %}
-      <div class="col-xs-8">
-        <h4>{{ post.date | date: "%B %-d, %Y"}}</h4>
-        {{ post.content }}
-      </div>
+      {% include battlegrounds/post %}
     </article>
     {% endfor %}
     <div class="row"><footer class="col-sm-6 col-sm-offset-3 col-xs-12">
