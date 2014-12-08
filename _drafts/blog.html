@@ -6,13 +6,7 @@ permalink: blog/index.html
 ---
 
 {% for post in site.categories.blog  %}
-<article class="well col-md-6">
-  {% if post.video %}
-  <div class="flex-video widescreen">
-    <iframe src="{{ post.video }}?html5=1&vq=small" frameborder="0" allowfullscreen></iframe>
-  </div>
-  {% endif %}
-  <h4>{{ post.date | date: "%B %-d, %Y"}}</h4>
-  {{ post.content }}
+<article class="article well row">
+  {% include battlegrounds/post %}
 </article>
 {% endfor %}
