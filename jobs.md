@@ -6,6 +6,6 @@ group: navigation
 permalink: jobs/index.html
 ---
 
-Battlegrounds is expanding in the new year!
+# Battlegrounds is expanding in the new year!
 
 Job announcements will be posted shortly.
